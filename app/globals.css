@@ -1,0 +1,148 @@
+@import 'animate.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Global Performance & Responsive Scrolling ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background-color: #fafafa;
+}
+
+.col-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kill-link-style {
+  text-decoration: none;
+  color: inherit;
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ===== Sticky Nav Hide/Show ===== */
+.nav-top-hidden {
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-top-visible {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== Contact Me Pane ===== */
+.contact-me-inactive {
+  transform: translate3d(0, 110%, 0);
+  bottom: 0;
+}
+
+.contact-me-active {
+  transform: translate3d(0, 0, 0);
+  bottom: 0;
+}
+
+/* ===== Mobile Nav ===== */
+.offscreen-nav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.offscreen-nav-hidden {
+  transform: translate3d(100%, 0, 0);
+  pointer-events: none;
+}
+
+.offscreen-nav-visible {
+  transform: translate3d(0, 0, 0);
+  pointer-events: auto;
+}
+
+/* ===== Yellow Highlighter Magical Underline ===== */
+.underline--magical {
+  background-image: linear-gradient(120deg, #fde047 0%, #facc15 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.28em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in, color 0.25s ease-in;
+  padding-bottom: 2px;
+}
+
+.underline--magical:hover,
+.underline--magical:active {
+  background-size: 100% 88%;
+  color: #000000;
+}
+
+.underline--magical-2 {
+  background-image: linear-gradient(120deg, #fde047 0%, #facc15 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.28em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in, color 0.25s ease-in;
+  padding-bottom: 2px;
+}
+
+.underline--magical-2:hover,
+.underline--magical-2:active {
+  background-size: 100% 88%;
+  color: #000000;
+}
+
+/* ===== Hardware-Accelerated Mobile Hover & Touch Lift ===== */
+.move-up-slightly {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.move-up-slightly:hover {
+  transform: translate3d(0, -4px, 0);
+}
+
+.move-up-slightly:active {
+  transform: translate3d(0, -1px, 0);
+}
+
+/* ===== Animation Delays ===== */
+.delay1 { animation-delay: 0.15s; }
+.delay2 { animation-delay: 0.3s; }
+.delay3 { animation-delay: 0.45s; }
+.delay4 { animation-delay: 0.6s; }
+
+/* ===== Profile Image Glow on Hover ===== */
+#vishv-image {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transform: translate3d(0, 0, 0);
+}
+
+#vishv-image:hover,
+#vishv-image:active {
+  border-color: #facc15 !important;
+  box-shadow: 0 0 0 8px rgba(250, 204, 21, 0.35);
+}

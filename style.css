@@ -1,0 +1,123 @@
+/* ===== Global ===== */
+* { box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.col-centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kill-link-style {
+    text-decoration: none;
+    color: inherit;
+}
+
+.no-select {
+    user-select: none;
+}
+
+/* ===== Sticky Nav Hide/Show ===== */
+.nav-top-hidden {
+    transform: translateY(-100%);
+}
+
+.nav-top-visible {
+    transform: translateY(0%);
+}
+
+/* ===== Contact Me Pane ===== */
+.contact-me-inactive {
+    bottom: -83%;
+}
+
+.contact-me-active {
+    bottom: 0;
+}
+
+/* ===== Mobile Nav ===== */
+.offscreen-nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.offscreen-nav-hidden {
+    transform: translateX(100%);
+}
+
+.offscreen-nav-visible {
+    transform: translateX(0%);
+}
+
+/* ===== Magical Underline (from zach's style) ===== */
+.underline--magical {
+    background-image: linear-gradient(120deg, #818cf8 0%, #6366f1 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    padding-bottom: 2px;
+}
+
+.underline--magical:hover {
+    background-size: 100% 88%;
+    color: white;
+}
+
+.underline--magical-2 {
+    background-image: linear-gradient(120deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    padding-bottom: 2px;
+}
+
+.underline--magical-2:hover {
+    background-size: 100% 88%;
+    color: #4f46e5;
+}
+
+/* ===== Hover Lift ===== */
+.move-up-slightly {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.move-up-slightly:hover {
+    transform: translateY(-4px);
+}
+
+/* ===== Animation Delays ===== */
+.delay1 { animation-delay: 0.15s; }
+.delay2 { animation-delay: 0.3s; }
+.delay3 { animation-delay: 0.45s; }
+.delay4 { animation-delay: 0.6s; }
+
+/* ===== Profile Image Pulse on hover ===== */
+#vishv-image:hover {
+    border-color: #6366f1 !important;
+    box-shadow: 0 0 0 8px rgba(99, 102, 241, 0.2);
+}
+
+/* ===== Scroll Reveal ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Featured card emoji center ===== */
+.featured-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
